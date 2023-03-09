@@ -1,0 +1,26 @@
+
+<% if (kindOfDoc == 'C') { %>
+<form action="/book/create_process" method="post">
+<h1>Book 생성</h1>
+<% } else { %>
+<form action="/book/update_process/<%=bId%>" method="post">
+<h1>Book 수정</h1>
+<% } %>
+
+<p>책 이름:  <input type="text" name="name" value="<%=name%>" style="width: 400px; border-color: antiquewhite;" placeholder="name"></p>
+<p>출판사:  <input type="text" name="publisher" value="<%=publisher%>" style="width: 400px; border-color: antiquewhite;" placeholder="publisher"></p>
+<p>저자:  <input type="text" name="author" value="<%=author%>" style="width: 400px; border-color: antiquewhite;" placeholder="author"></p>
+<p>재고:  <input type="text" name="stock" value="<%=stock%>" style="width: 400px; border-color: antiquewhite;" placeholder="stock"></p>
+<p>출판일:  <input type="text" name="pubdate" value="<%=pubdate%>" style="width: 400px; border-color: antiquewhite;" placeholder="pubdate"></p>
+<p>쪽수:  <input type="text" name="pagenum" value="<%=pagenum%>" style="width: 400px; border-color: antiquewhite;" placeholder="pagenum"></p>
+<p>ISBN:  <input type="text" name="ISBN" value="<%=ISBN%>" style="width: 400px; border-color: antiquewhite;" placeholder="ISBN"></p>
+<p>ebook 유무:  <input type="text" name="ebook" value="<%=ebook%>" style="width: 400px; border-color: antiquewhite;" placeholder="Y/N"></p>
+<p>kdc:  <input type="text" name="kdc" value="<%=kdc%>" style="width: 400px; border-color: antiquewhite;" placeholder="kdc"></p>
+<p>이미지 파일:  <input type="text" name="img" value="<%=img%>" style="width: 400px; border-color: antiquewhite;" placeholder="img 경로"></p>
+<p>가격:  <input type="text" name="price" value="<%=price%>" style="width: 400px; border-color: antiquewhite;" placeholder="가격"></p>
+<p>원서:  <input type="text" name="nation" value="<%=nation%>" style="width: 400px; border-color: antiquewhite;" placeholder="nation"></p>
+<p>책 설명:  </p>
+<p><textarea name="description" placeholder="설명" cols="60" style="border-color: antiquewhite;"><%=description%></textarea></p>
+
+<p><input type="submit"></p>
+</form>

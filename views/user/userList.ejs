@@ -1,0 +1,34 @@
+<h1>User</h1>
+<table class="table table-sm table-bordered" style="width: 900px">
+    <th>아이디</th>
+    <th>비밀번호</th>
+    <th>이름</th>
+    <th>거주지</th>
+    <th>전화번호</th>
+    <th>생년원일</th>
+    <th>권한(class)</th>
+    <th>grade</th>
+    <th>수정</th>
+    <th>삭제</th>
+    <%
+        var i = 0;
+
+        while(i < results.length) {
+    %>
+        <tr>
+            <td class="td td-sm"><%=results[i].loginid%></td>
+            <td><%=results[i].password%></td>
+            <td><%=results[i].name%></td>
+            <td><%=results[i].address%></td>
+            <td><%=results[i].tel%></td>
+            <td><%=results[i].birth%></td>
+            <td><%=results[i].user_class%></td>
+            <td><%=results[i].grade%></td>
+            <td><a href="/user/update/<%=results[i].id%>">update</a></td>
+            <td><a href="/user/delete_process/<%=results[i].id%>">delete</a></td>
+        </tr>
+    <%
+        i++;
+        }
+    %>
+</table>

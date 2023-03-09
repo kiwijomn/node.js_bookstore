@@ -1,0 +1,72 @@
+    <h1>검색 화면 </h1>
+    <% if (kindOfDoc == 'B') { %>
+    <form action="/book/search" method="post">
+    <% } else if (kindOfDoc == 'N') { %>
+    <form action="/namecard/search" method="post">
+    <% } else if (kindOfDoc == 'C') { %>
+    <form action="/calendar/search" method="post">
+    <% } %>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2  col-form-label"><%=kind%></label>
+          <div class="col-sm-5">
+            <input type="id" class="form-control" placeholder="<%=searchword%>" name="keyword" maxlength="50">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">검색</button>
+    </form>
+    <p>
+      <% if (listyn == "Y" && kindOfDoc == "B")
+        {    
+      %>
+            <table class="table">
+                  <th>검색 결과</th> <th>책 제목</th> <th>저자</th> <th>가격</th>
+      <%    var i = 0;
+            while(i < bs.length) {
+      %>
+              <tr><td><img src="/images/<%=bs[i].img%>" style="width:85px;height:120px; "></td>
+                  <td><a href="/book_detail/<%=bs[i].id%>"><%=bs[i].name%></a></td>
+                  <td><%=bs[i].author%></td>
+                  <td><%=bs[i].price%>원</td>
+              </tr>
+      <% 
+              i++; 
+            }  
+      %>
+            </table>
+      <%
+        } else if (listyn == "Y" && kindOfDoc == 'N') { %>
+            <table class="table">
+                  <th>이름</th> <th>주소</th> <th>직장</th> <th>전화번호</th>
+      <%    var i = 0;
+            while(i < bs.length) {
+      %>
+      <tr>
+            <td><%=bs[i].name%></td>
+            <td><%=bs[i].address%></td>
+            <td><%=bs[i].workplace%></td>
+            <td><%=bs[i].tel%></td>
+          </tr>
+      <% 
+              i++; 
+          }  
+      %>
+            </table>
+      <%
+        }  else if (listyn == "Y" && kindOfDoc == 'C') { %>
+            <table class="table">
+                  <th>Month</th> <th>Plan</th>
+      <%    var i = 0;
+            while(i < bs.length) {
+      %>
+              <tr>
+                  <td><%=bs[i].title%></td>
+                  <td><%=bs[i].description%></td>
+              </tr>
+      <% 
+              i++; 
+          }  
+      %>
+            </table>
+      <%
+          } %>
+    </p>

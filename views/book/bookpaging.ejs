@@ -1,0 +1,54 @@
+<%  if (kindofurl == 'H') { %>
+    <h2 style="background-color: #E6FFE6; display: inline;">Node.js 서점에 오신것을 환영합니다!</h2>
+    <br/><br/>
+<% } %>
+    
+    <h1><%=kind%></h1>
+    <table class="table table-sm table-bordered" style="width: 600px">
+        <th>책</th>
+        <th>제목</th>
+        <th>저자</th>
+        <th>가격</th>
+        <%  var i = 0;
+          while(i < book.length) {
+      %>
+            <tr>
+                <td><img src="/images/<%=book[i].img%>" style="width:100px;height:130px; "></td>
+                <td><a href="/book_detail/<%=book[i].id%>"><%=book[i].name%></a></td>
+                <td><%=book[i].author%></td>
+                <td><%=book[i].price%>원</td>
+            </tr>
+      <% 
+             i++; 
+          }  
+      %>
+    </table>
+
+    <%  if (kindofurl == 'H') {
+        var j = 1;
+        while (j <= totalpages) { 
+            if(j == pageNum){ %>
+                <span style="font-weight : bold;"><%=j%></span> &nbsp;&nbsp;
+            <% } else { %>
+                <span><a href="/home/<%=j%>"><%=j%></a></span> &nbsp;&nbsp;
+        <%     } 
+            j++ 
+        }} else if (kindofurl == 'L'){
+        var j = 1;
+        while (j <= totalpages) { 
+            if(j == pageNum){ %>
+                <span style="font-weight : bold;"><%=j%></span> &nbsp;&nbsp;
+            <% } else { %>
+                <span><a href="/book/list/<%=j%>"><%=j%></a></span> &nbsp;&nbsp;
+        <%     } 
+            j++ 
+        }} else if (kindofurl == 'E'){
+        var j = 1;
+        while (j <= totalpages) { 
+            if(j == pageNum){ %>
+                <span style="font-weight : bold;"><%=j%></span> &nbsp;&nbsp;
+            <% } else { %>
+                <span><a href="/ebook/<%=j%>"><%=j%></a></span> &nbsp;&nbsp;
+        <%     } 
+            j++ 
+        }} %>

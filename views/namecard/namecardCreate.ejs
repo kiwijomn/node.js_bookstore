@@ -1,0 +1,16 @@
+<h1>NameCard 생성</h1>
+<% if (kindOfDoc == 'C') { %>
+<form action="/namecard/create_process" method="post">
+<% } else { %>
+<form action="/namecard/update_process/<%=pId%>" method="post">
+<% } %>
+
+<table style="width: 750px; height: 400px;">
+    <tr valign="top"><td >이름:</td><td><input type="text" name="name" value="<%=name%>" style="width: 400px; border-color: antiquewhite;" placeholder="name"></td></tr>
+    <tr valign="top"><td>주소:</td><td><textarea name="address" placeholder="address" cols="60" style="border-color: antiquewhite;"><%=address%></textarea></td></tr>
+    <tr valign="top"><td>직장:</td><td><textarea name="workplace" placeholder="workplace" cols="60" style="border-color: antiquewhite;"><%=workplace%></textarea></td></tr>
+    <tr valign="top"><td>전화번호:</td><td><textarea name="tel" placeholder="tel" cols="60" style="border-color: antiquewhite;"><%=tel%></textarea></td></tr>
+    <tr valign="top"><td>생년월일:</td><td><textarea name="birth" placeholder="birth" cols="60" style="border-color: antiquewhite;"><%=birth%></textarea></td></tr>
+</table>
+<p><input type="submit"></p>
+</form>

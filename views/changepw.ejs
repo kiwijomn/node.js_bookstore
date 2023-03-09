@@ -1,0 +1,25 @@
+
+    <h1>비밀번호 변경</h1>
+    <br><br/>
+    <form action="/changepw_process" method="post">
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2  col-form-label">로그인 ID *</label>
+          <div class="col-sm-5">
+            <input type="id" class="form-control" placeholder="ID" name="loginid" value="<%=loginid%>" maxlength="20">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2  col-form-label">현재 비밀번호 *</label>
+          <div class="col-sm-5">
+            <input type="password" class="form-control" id="nowpw" name="nowpassword" value="<%=password%>" maxlength="20">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">새 비밀번호 *</label>
+          <div class="col-sm-5">
+            <input type="password" class="form-control" id="newpw" name="password" value="<%=password%>" maxlength="20">
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Change</button>
+    </form>

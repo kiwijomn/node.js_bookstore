@@ -1,0 +1,28 @@
+    <h1> <%=name%> </h1>
+    <form>
+      <input type="hidden" id="bookid" name="bookid" value="<%=bookid%>">
+      <table class="table">
+        <tr><td colspan="2"><img src="/images/<%=img%>" style="width: 200px;height:300px; "></td></tr>
+        <tr><td><b><%=name%></b></td><td>저자 : <%=author%></td></tr>
+        <tr>
+          <td>가격: <%=price%> 원 <input type="hidden" id="price" name="price" value="<%=price%>"></td>
+          <td >수량 : <input type="text" name="qty" value="<%=qty%>"></td>
+        </tr>
+        
+        <% if (loggined === true) { %>
+          <tr>
+              <td>
+                  <button type="submit" formaction = "/book/cart" formmethod="post">장바구니</button>
+              </td>
+              <td>
+                  <button type="submit" formaction = "/book/purchase" formmethod="post">구매</button>
+              </td>
+          </tr>
+        <% } else { %>
+          <tr><td><b><i>로그인 후 구매 가능</i></b></td></tr>
+        <% } %>
+        <th colspan="2"><i>장바구니 추가 또는 구매 시, 반드시 수량을 입력해주세요.</i></th>
+
+      </table>
+
+    </form>

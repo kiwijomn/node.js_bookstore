@@ -1,0 +1,15 @@
+<h1>월별 계획</h1>
+<table class="table table-sm table-bordered" style="width: 600px">
+    <th>Month</th>
+    <th>Plan</th>
+    <%
+        var i = 0;
+
+        while(i < results.length) {
+    %>
+            <tr><td class="td td-sm"><%=results[i].title%></td><td><%=results[i].description%></td></tr> <!--result는 js에서 넘어온 변수-->
+    <%
+            i++;
+        }
+    %>
+</table>

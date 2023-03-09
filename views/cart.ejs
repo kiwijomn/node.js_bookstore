@@ -1,0 +1,46 @@
+<% if (loggined === true) { %>
+<h1><%=kind%></h1>
+<table class="table table-sm table-bordered" style="width: 800px">
+    <th colspan="3">책 정보 (제목 & 저자)</th>
+    <th>추가한 날짜</th>
+    <th>수량</th>
+    <th>구매</th>
+    <th>삭제</th>
+    <%
+        var i = 0;
+
+        while(i < results.length) {
+    %>
+            <tr>
+                <td><img src="/images/<%=results[i].img%>" style="width:80px;height:105px; "></td>
+                <td><a href="/book_detail/<%=results[i].id%>"><%=results[i].name%></a></td>
+                <td><%=results[i].author%></td>
+                <td><%=results[i].cartdate%></td>
+                <td><%=results[i].qty%></td>
+                <form>
+                    <td>
+                        <input type="hidden" id="price" name="price" value="<%=results[i].price%>">
+                        <input type="hidden" id="bookid" name="bookid" value="<%=results[i].id%>">
+                        <input type="hidden" id="qty" name="qty" value="<%=results[i].qty%>">
+                        <input type="hidden" id="cartid" name="cartid" value="<%=results[i].cartid%>">
+                        <button type="submit" formaction = "/book/purchase" formmethod="post">구매하기</button>
+                    </td>
+                    <td>
+                        <button type="submit" formaction = "/book/cart_delete" formmethod="post">Delete</button>
+                    </td>
+                </form>
+            </tr>
+            
+    <%
+            i++;
+        }
+    %>
+</table>
+<form>
+    <button type="submit" formaction = "/book/purchase_all" formmethod="post">모두 구매</button>
+    &nbsp;&nbsp;&nbsp;
+    <button type="submit" formaction = "/book/purchaselist" formmethod="get">구매페이지로 이동</button>
+</form>
+<% } else { %>
+    <h2><b>로그인 후 이용 가능</b></h2>
+<% } %>

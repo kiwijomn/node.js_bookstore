@@ -1,0 +1,39 @@
+<h1><%=kind%></h1>
+<table class="table table-sm table-bordered" style="width: 850px">
+    <th>구매 정보</th> <th>책 제목</th> <th>가격</th> <th>수량</th> <th>구매한 날짜</th> <th>취소하기</th> <th>환불하기</th>
+    <%
+        var i = 0;
+
+        while(i < results.length) {
+    %>
+            <tr>
+                <td><img src="/images/<%=results[i].img%>" style="width:75px;height:100px; "></td>
+                <td><a href="/book_detail/<%=results[i].id%>"><%=results[i].name%></a></td>
+                <td><%=results[i].price%></td>
+                <td><%=results[i].qty%></td>
+                <td><%=results[i].purchasedate%></td>
+                <form>
+                    <td>
+                        <input type="hidden" id="price" name="price" value="<%=results[i].price%>">
+                        <input type="hidden" id="purchaseid" name="purchaseid" value="<%=results[i].purchaseid%>">
+                        <input type="hidden" id="qty" name="qty" value="<%=results[i].qty%>">
+                        <% if (results[i].cancel == "N") { %>
+                        <button type="submit" formaction = "/book/purchase_cancel" formmethod="post">취소하기</button>
+                        <% } else { %>
+                        <span>취소 완료</span>
+                        <% } %>
+                    </td>
+                    <td>
+                        <% if (results[i].refund == "N") { %>
+                        <button type="submit" formaction = "/book/purchase_refund" formmethod="post">환불하기</button>
+                        <% } else { %>
+                        <span>환불 완료</span>
+                        <% } %>
+                    </td>
+                </form>
+            </tr>
+    <%
+            i++;
+        }
+    %>
+</table>

@@ -1,0 +1,20 @@
+<h1>User 생성</h1>
+<% if (kindOfDoc == 'C') { %>
+<form action="/user/create_process" method="post">
+<% } else { %>
+<form action="/user/update_process/<%=pId%>" method="post">
+<% } %>
+
+<table style="width: 750px; height: 500px;">
+    <tr valign="top"><td>아이디:</td><td><input type="text" name="loginid" value="<%=loginid%>" style="width: 400px; border-color: antiquewhite;" placeholder="loginid"></td></tr>
+    <tr valign="top"><td>비밀번호:</td><td><input type="text" name="password" value="<%=password%>" style="width: 400px; border-color: antiquewhite;" placeholder="password"></td></tr>
+    <tr valign="top"><td>이름:</td><td><input type="text" name="name" value="<%=name%>" style="width: 400px; border-color: antiquewhite;" placeholder="name"></td></tr>
+    <tr valign="top"><td>주소:</td><td><textarea name="address" placeholder="address" cols="60" style="border-color: antiquewhite;"><%=address%></textarea></td></tr>
+    <tr valign="top"><td>전화번호:</td><td><textarea name="tel" placeholder="tel" cols="60" style="border-color: antiquewhite;"><%=tel%></textarea></td></tr>
+    <tr valign="top"><td>생년월일:</td><td><textarea name="birth" placeholder="birth" cols="60" style="border-color: antiquewhite;"><%=birth%></textarea></td></tr>
+    <tr valign="top"><td>권한(class):</td><td><input type="text" name="user_class" value="<%=user_class%>" style="width: 400px; border-color: antiquewhite;" placeholder="user_class"></td></tr>
+    <tr valign="top"><td>grade:</td><td><input type="text" name="grade" value="<%=grade%>" style="width: 400px; border-color: antiquewhite;" placeholder="grade"></td></tr>
+</table>
+
+<p><input type="submit"></p>
+</form>

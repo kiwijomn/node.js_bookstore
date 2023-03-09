@@ -1,0 +1,30 @@
+<h1>Book List</h1>
+<table class="table table-sm table-bordered" style="width: 1150px">
+    <th>책 정보</th><th>제목</th><th>출판사</th><th>저자</th><th>재고</th><th>출판일</th><th>쪽수</th>
+    <th>ISBN</th><th>ebook</th><th>kdc</th><th>가격</th><th>원서</th><th>수정</th><th>삭제</th>
+    <%
+        var i = 0;
+
+        while(i < results.length) {
+    %>
+        <tr>
+            <td class="td td-sm"><img src="/images/<%=results[i].img%>" style="width:80px;height:100px; "></td>
+            <td><%=results[i].name%></td>
+            <td><%=results[i].publisher%></td>
+            <td><%=results[i].author%></td>
+            <td><%=results[i].stock%></td>
+            <td><%=results[i].pubdate%></td>
+            <td><%=results[i].pagenum%></td>
+            <td><%=results[i].ISBN%></td>
+            <td><%=results[i].ebook%></td>
+            <td><%=results[i].kdc%></td>
+            <td><%=results[i].price%></td>
+            <td><%=results[i].nation%></td>
+            <td><a href="/book/update/<%=results[i].id%>">update</a></td>
+            <td><a href="/book/delete_process/<%=results[i].id%>">delete</a></td>
+        </tr>
+    <%
+        i++;
+        }
+    %>
+</table>
