@@ -12,14 +12,12 @@ Node.js를 활용한 서점 사이트
 
 [1. 메인 페이지](#메인-페이지)
 
-
 [2. authentic](#로그인-/-로그아웃-/-회원가입-/-비밀번호-변경)
-
 
 [3. book detail](#로그인-하기-전-/-로그인-후-책-세부-정보-화면)
 
-
-[3. board](#게시판)
+[4. 구매 및 장바구니](#구매-및-장바구니)
+[5. board](#게시판)
 
 ### 메인 페이지
 ![image](https://user-images.githubusercontent.com/116738827/224456000-6bb75005-89e8-42ca-958b-3825a30af001.png)
@@ -35,6 +33,12 @@ Node.js를 활용한 서점 사이트
 
 ### 로그인 하기 전 / 로그인 후 책 세부 정보 화면
 ![image](https://user-images.githubusercontent.com/116738827/224456383-f675617b-46cd-4b51-89ab-3967f0dc63b2.png)
+
+### 구매 및 장바구니
+![image](https://user-images.githubusercontent.com/116738827/224460385-b8cce3a9-c98f-42ea-b45f-51a1025a7970.png)
+
+- cart: 장바구니 기능. 개별 구매 / 일괄 구매 / 삭제 가능
+- Order: 주문 내역. 취소 및 환불 가능
 
 ### 게시판
 - 로그인 후 이용 가능
