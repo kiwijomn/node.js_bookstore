@@ -25,13 +25,10 @@ Node.js를 활용한 서점 사이트
 ![image](https://user-images.githubusercontent.com/116738827/224456000-6bb75005-89e8-42ca-958b-3825a30af001.png)
 ![image](https://user-images.githubusercontent.com/116738827/224460169-95719cb0-2909-442f-abf2-30466e44f049.png)
 
-Home: 메인 홈 화면
-
-Best: 베스트 셀러인 도서 확인 가능
-
-MonBook: 이달의 책 추천 기능
-
-ebook: ebook을 제공하는 도서 확인 가능
+- Home: 메인 홈 화면
+- Best: 베스트 셀러인 도서 확인 가능
+- MonBook: 이달의 책 추천 기능
+- ebook: ebook을 제공하는 도서 확인 가능
 
 ### 로그인 / 회원가입 / 로그아웃 / 비밀번호 변경
 ![image](https://user-images.githubusercontent.com/116738827/224457278-7fdbb563-2d47-4032-b03f-502cd1b3bae2.png)
