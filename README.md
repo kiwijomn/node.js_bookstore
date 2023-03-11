@@ -21,8 +21,7 @@ Node.js를 활용한 서점 사이트
 [5. board](#게시판)
 
 ### 메인 페이지
-![image](https://user-images.githubusercontent.com/116738827/224456000-6bb75005-89e8-42ca-958b-3825a30af001.png)
-![image](https://user-images.githubusercontent.com/116738827/224460169-95719cb0-2909-442f-abf2-30466e44f049.png)
+![image](https://user-images.githubusercontent.com/116738827/224460584-6774c17b-e424-4362-a979-6837faade56a.png)
 
 - Home: 메인 홈 화면
 - Best: 베스트 셀러인 도서 확인 가능
