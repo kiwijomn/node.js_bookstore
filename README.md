@@ -40,3 +40,6 @@ ebook: ebook을 제공하는 도서 확인 가능
 ![image](https://user-images.githubusercontent.com/116738827/224456383-f675617b-46cd-4b51-89ab-3967f0dc63b2.png)
 
 ### 게시판
+- 로그인 후 이용 가능
+- 본인의 게시글만 수정, 삭제 가능
+- admin(관리자) 로그인 시 모든 회원의 게시글에 접근 권한 있음
