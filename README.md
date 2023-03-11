@@ -8,7 +8,7 @@ Node.js를 활용한 서점 사이트
 #### - views: ejs 파일 모음 (화면 구성)
 #### - public/images: 사용되는 파일 및 이미지 모음
 
-
+******************************
 ### home 화면
 ![image](https://user-images.githubusercontent.com/116738827/224456000-6bb75005-89e8-42ca-958b-3825a30af001.png)
 
